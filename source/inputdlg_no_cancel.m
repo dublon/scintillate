@@ -58,38 +58,38 @@ function Answer=inputdlg_no_cancel(Prompt, Title, NumLines, DefAns, Resize)
 %%%%%%%%%%%%%%%%%%%%
 %%% Nargin Check %%%
 %%%%%%%%%%%%%%%%%%%%
-error(nargchk(0,5,nargin));
-error(nargoutchk(0,1,nargout));
+narginchk(0,5);
+nargoutchk(0,1);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Handle Input Args %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
 if nargin<1
-    Prompt='Input:';
+  Prompt=getString(message('MATLAB:uistring:popupdialogs:InputDlgInput'));
 end
 if ~iscell(Prompt)
-    Prompt={Prompt};
+  Prompt={Prompt};
 end
 NumQuest=numel(Prompt);
 
 
 if nargin<2,
-    Title=' ';
+  Title=' ';
 end
 
 if nargin<3
-    NumLines=1;
+  NumLines=1;
 end
 
 if nargin<4
-    DefAns=cell(NumQuest,1);
-    for lp=1:NumQuest
-        DefAns{lp}='';
-    end
+  DefAns=cell(NumQuest,1);
+  for lp=1:NumQuest
+    DefAns{lp}='';
+  end
 end
 
 if nargin<5
-    Resize = 'off';
+  Resize = 'off';
 end
 WindowStyle='modal';
 Interpreter='none';

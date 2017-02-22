@@ -83,7 +83,7 @@ varargout{1} = handles.output;
 % --- Executes on button press in openbutton.
 function [Filename]=openbutton_Callback(hObject, eventdata, handles)
 tsStack = [];
-loadedstring = char('Scintillate; Dublon et al. 2016 Kemisk Ekologi, Sveriges lantbruksuniversitet, Alnarp.');
+loadedstring = char('Scintillate; Dublon et al. 2016. Kemisk Ekologi, Sveriges lantbruksuniversitet, Alnarp. v.1.0.1, 2017');
 set(handles.statustext,'String', loadedstring);
 
 % Read in tiff data
@@ -774,9 +774,9 @@ function main_menu_Callback(~, ~, ~)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ------------------------------------------------------------------------
 function about_menuitem_Callback(~, ~, ~)
-msgbox({'Scintillate','v.1.0.0 (b20160607)',...
+msgbox({'Scintillate','v.1.0.1 (b20170220)',...
     'A MATLAB based GUI graphic visualiser for multi-stacked TIFF files.','',...
-    'Ian Dublon, Markus Nilsson, Anna Balkenius, Peter Anderson and Mattias Larsson','2016',...,'',...,'',...
+    'Ian Dublon, Markus Nilsson, Anna Balkenius, Peter Anderson and Mattias Larsson','2016, 2017',...,'',...,'',...
     'This program uses some 3rd party freeware components; please see License menu item for more information.','',...
     'ian.dublon@slu.se | ian.dublon@gmail.com'},'About');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
